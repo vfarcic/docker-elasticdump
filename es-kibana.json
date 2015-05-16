@@ -1,0 +1,4 @@
+[
+{"_index":".kibana","_type":"dashboard","_id":"error","_score":0,"_source":{"title":"error","hits":0,"description":"","panelsJSON":"[{\"col\":1,\"id\":\"error\",\"row\":1,\"size_x\":10,\"size_y\":2,\"type\":\"visualization\"},{\"col\":11,\"id\":\"error-number\",\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"error\",\"row\":3,\"size_x\":12,\"size_y\":4,\"type\":\"search\"}]","version":1,"kibanaSavedObjectMeta":{"searchSourceJSON":"{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"}}}
+]
+
