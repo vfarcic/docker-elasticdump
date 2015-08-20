@@ -14,7 +14,7 @@ elastic-dump is the entry point and expects parameters to be passed as Docker co
 To export and zip an entire LogStash index (change MY_DOMAIN):
 
 ```bash
-sudo docker run --rm vfarcic/elasticdump \
+sudo docker run --rm vfarcic/elasticsearch-dump \
     --input=http://MY_DOMAIN:9200/logstash-* \
     --output=$ \
     --type=data | gzip >es-logstash.gzip
@@ -23,7 +23,7 @@ sudo docker run --rm vfarcic/elasticdump \
 To export Kibana configuration (change MY_DOMAIN):
 
 ```bash
-sudo docker run --rm vfarcic/elasticdump \
+sudo docker run --rm vfarcic/elasticsearch-dump \
     --input=http://MY_DOMAIN:9200/.kibana \
     --output=$ \
     --type=data >es-kibana.json
@@ -36,7 +36,7 @@ To import LogStash index (change MY_DOMAIN):
 ```bash
 sudo docker run --rm \
     -v $PWD:/data \
-    vfarcic/elasticdump \
+    vfarcic/elasticsearch-dump \
     --input=/data/es-logstash.json \
     --output=http://MY_DOMAIN:9200/.kibana \
     --type=data
@@ -47,7 +47,7 @@ To import Kibana configuration (change MY_DOMAIN):
 ```bash
 sudo docker run --rm \
     -v $PWD:/data \
-    vfarcic/elasticdump \
+    vfarcic/elasticsearch-dump \
     --input=/data/es-kibana.json \
     --output=http://MY_DOMAIN:9200/.kibana \
     --type=data
